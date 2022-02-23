@@ -16,6 +16,7 @@ root@0a0b30151421:/data/Custom-Package/acme-hello# python -m pytest test_acme_he
 ```bash
 root@0a0b30151421:/data/Custom-Package/acme-hello# python -m synapse.tools.genpkg acme-hello.yaml --push cell:///vertex/storage
 ```
+![screenshot](PoC1.png)
 ### woot ! it got pushed , now lets test it if it works or not in Storm shell
 ```bash
 root@0a0b30151421:/data/Custom-Package/acme-hello# python -m synapse.tools.storm cell:///vertex/storage
@@ -79,7 +80,6 @@ complete. 0 nodes in 45 ms (0/sec).
 storm>
 ```
 ### Bingo it Works Fine !! <3 GG
-![screenshot](PoC1.png)
 ![screenshot](PoC2.png)
 
 
