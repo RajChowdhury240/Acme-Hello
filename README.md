@@ -1,3 +1,4 @@
+![](index.png)
 # Acme-Hello
 ```bash
 * A Custom Storm Package
