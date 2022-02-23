@@ -1,0 +1,4 @@
+function initMetaSource() {
+    [ meta:source=$modconf.source :name="ACME Hello World" ]
+    return($node)
+}

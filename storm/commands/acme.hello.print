@@ -1,0 +1,8 @@
+$message = $cmdopts.message
+
+if $cmdopts.show_prefix {
+    $message = $lib.str.format("{prefix} {message}", prefix=$cmdopts.prefix, message=$message)
+}
+
+$lib.print($message)
+

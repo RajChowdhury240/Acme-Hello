@@ -1,0 +1,6 @@
+/* storm code goes here */
+
+$privsep = $lib.import(acme.hello.privsep)
+$srcnode = $privsep.initMetaSource()
+
+// could use $privsep to do things like init a meta:source node etc

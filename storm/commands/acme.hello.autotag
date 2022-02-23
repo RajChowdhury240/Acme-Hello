@@ -1,0 +1,13 @@
+/*
+    nodes will be input as part of the regular storm pipeline
+    Commands are also provided a the variable $cmdopts which is a dictionary
+    containing all the command line switches/arguments provided by the invoker
+*/
+
+[ +#acme.hello ]
+
+/* lets also add a -(seen)> edge from our meta:source for the package */
+
+$hello = $lib.import(acme.hello)
+
+[ <(seen)+ { yield $hello.srcnode } ]

@@ -1,0 +1,45 @@
+name: acme-hello
+version: 1.0.0
+synapse_minversion: [2, 58, 0]
+desc: The ACME Hello Power-Up provides an exaple of a basic storm package.
+
+author:
+  url: https://vertex.link
+  name: The Vertex Project, LLC.
+
+# declare/describe any permissions we've made up to control access to the package.
+perms:
+    - perm: [ power-ups, acme-hello, user ]
+      desc: Allows a user to run acme-hello commands and import acme-hello provided modules
+      gate: cortex
+
+modules:
+  - name: acme.hello
+  - name: acme.hello.privsep
+    modconf:
+        source: bc2da0701447a730af49d5a2beb68007
+    # this allows the acme.hello.privsep module to run as root! use with caution!
+    asroot:perms:
+        - [ power-ups, acme-hello, user ]
+
+commands:
+  - name: acme.hello.print
+    descr: Print some text
+    perms:
+        - [ power-ups, acme-hello, user ]
+    cmdargs:
+      - - message
+        - type: str
+          help: The text to print.
+      - - --show-prefix
+        - type: bool
+          default: false
+          action: store_true
+      - - --prefix
+        - type: str
+          default: HELLO
+
+  - name: acme.hello.autotag
+    descr: Tag all input nodes with acme.hello
+    perms:
+        - [ power-ups, acme-hello, user ]
