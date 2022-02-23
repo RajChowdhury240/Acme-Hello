@@ -5,7 +5,7 @@ desc: The ACME Hello Power-Up provides an exaple of a basic storm package.
 
 author:
   url: https://vertex.link
-  name: The Vertex Project, LLC.
+  name: Raj
 
 # declare/describe any permissions we've made up to control access to the package.
 perms:
