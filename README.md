@@ -72,8 +72,8 @@ Arguments:
 
 ERROR: The argument <message> is required.
 complete. 0 nodes in 37 ms (0/sec).
-storm> acme.hello.print hello
-hello
+storm> acme.hello.print hello-jordan
+hello-jordan
 complete. 0 nodes in 45 ms (0/sec).
 storm>
 ```
