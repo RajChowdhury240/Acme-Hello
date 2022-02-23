@@ -26,14 +26,14 @@ class AcmeHelloTest(s_test.SynTest):
             msgs = await core.stormlist('acme.hello.print --show-prefix --prefix Jordan "hello world!"')
             self.stormIsInPrint('Jordan hello world!', msgs)
 
-            nodes = await core.nodes('[ inet:email=berry.jordan@syf.com ] | acme.hello.autotag')
+            nodes = await core.nodes('[ inet:email=jordan@xyz.com ] | acme.hello.autotag')
             self.len(1, nodes)
             self.true(nodes[0].tags.get('acme.hello') is not None)
 
             # check that the meta source node got created and linked...
             nodes = await core.nodes('meta:source:name="ACME Hello World" -(seen)> *')
             self.len(1, nodes)
-            self.eq(nodes[0].ndef, ('inet:email', 'berry.jordan@syf.com'))
+            self.eq(nodes[0].ndef, ('inet:email', 'jordan@xyz.com'))
 
             # check that the description is in the auto generated `--help` output
             msgs = await core.stormlist('acme.hello.print --help')
