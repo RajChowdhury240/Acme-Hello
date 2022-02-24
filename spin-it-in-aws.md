@@ -42,4 +42,17 @@ root@f54a5e0393ec:/# whoami
 root
 ```
 
+* Spin up Storm shell 
+```bash
+root@f54a5e0393ec:/# python -m synapse.tools.storm cell:///vertex/storage
+
+Welcome to the Storm interpreter!
+
+Local interpreter (non-storm) commands may be executed with a ! prefix:
+    Use !quit to exit.
+    Use !help to see local interpreter commands.
+
+storm>
+
+```
 
