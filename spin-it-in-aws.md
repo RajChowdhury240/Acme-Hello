@@ -1,4 +1,4 @@
-## install docker in aws EC2 instance
+## install docker in AWS EC2 instance
 
 ```bash
 $ sudo yum update -y
@@ -27,7 +27,7 @@ $ sudo usermod -a -G docker ec2-user
 * You can accomplish this by closing your current SSH terminal window and reconnecting to your instance in a new one.
 * Your new SSH session will have the appropriate docker group permissions.
 
-## pull the synapse cortex docker image into aws EC2 instance & launch it
+## pull the synapse cortex docker image into AWS EC2 instance & launch it
 ```bash
 $ docker pull vertexproject/synapse-cortex:v2.x.x
 ```
