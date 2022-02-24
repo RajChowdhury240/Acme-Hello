@@ -38,6 +38,7 @@ CONTAINER ID   IMAGE                                 COMMAND                  CR
 f54a5e0393ec   vertexproject/synapse-cortex:v2.x.x   "tini -- /vertex/syn…"   14 hours ago   Exited (0) 14 hours ago             recursing_euclid
 
 ```
+* run the docker image
 ```bash
 $ docker run vertexproject/synapse-cortex:v2.x.x
 
@@ -48,7 +49,7 @@ $ docker ps
 CONTAINER ID   IMAGE                                 COMMAND                  CREATED          STATUS                            PORTS                 NAMES
 34231df2da37   vertexproject/synapse-cortex:v2.x.x   "tini -- /vertex/syn…"   10 seconds ago   Up 9 seconds (health: starting)   4443/tcp, 27492/tcp   nifty_hodgkin
 ```
-
+* spawn a root /bin/bash shell
 ```bash
 $ docker exec -it f54a5e0393ec /bin/bash
 root@f54a5e0393ec:/# whoami
