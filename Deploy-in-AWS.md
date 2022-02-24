@@ -23,10 +23,11 @@ $ sudo systemctl enable docker
 ```bash
 $ sudo usermod -a -G docker ec2-user
 ```
+```
 * Log out and log back in again to pick up the new docker group permissions.
 * You can accomplish this by closing your current SSH terminal window and reconnecting to your instance in a new one.
 * Your new SSH session will have the appropriate docker group permissions.
-
+```
 ## pull the synapse cortex docker image into AWS EC2 instance & launch it
 ```bash
 $ docker pull vertexproject/synapse-cortex:v2.x.x
