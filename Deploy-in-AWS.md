@@ -33,10 +33,22 @@ $ sudo usermod -a -G docker ec2-user
 $ docker pull vertexproject/synapse-cortex:v2.x.x
 ```
 ```bash
-$ docker ps 
-CONTAINER ID   IMAGE                                 COMMAND                  CREATED       STATUS                   PORTS     NAMES
-f54a5e0393ec   vertexproject/synapse-cortex:v2.x.x   "tini -- /vertex/syn…"   6 hours ago   Exited (0) 6 hours ago             recursing_euclid
+$ docker ps -a    
+CONTAINER ID   IMAGE                                 COMMAND                  CREATED        STATUS                    PORTS     NAMES
+f54a5e0393ec   vertexproject/synapse-cortex:v2.x.x   "tini -- /vertex/syn…"   14 hours ago   Exited (0) 14 hours ago             recursing_euclid
+
 ```
+```bash
+$ docker run vertexproject/synapse-cortex:v2.x.x
+
+```
+* in other tab
+```bash
+$ docker ps                  
+CONTAINER ID   IMAGE                                 COMMAND                  CREATED          STATUS                            PORTS                 NAMES
+34231df2da37   vertexproject/synapse-cortex:v2.x.x   "tini -- /vertex/syn…"   10 seconds ago   Up 9 seconds (health: starting)   4443/tcp, 27492/tcp   nifty_hodgkin
+```
+
 ```bash
 $ docker exec -it f54a5e0393ec /bin/bash
 root@f54a5e0393ec:/# whoami
