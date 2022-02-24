@@ -43,7 +43,7 @@ root@f54a5e0393ec:/# whoami
 root
 ```
 
-* Spin up Storm shell 
+####  Spin up Storm shell 
 ```bash
 root@f54a5e0393ec:/# python -m synapse.tools.storm cell:///vertex/storage
 
