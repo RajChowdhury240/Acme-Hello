@@ -3,6 +3,9 @@
 ```bash
 $ sudo yum update -y
 ```
+```bash
+$ sudo yum install git
+```
 * Amazon Linux 2
 ```bash
 $ sudo amazon-linux-extras install docker
@@ -18,6 +21,7 @@ $ sudo service docker start
 * (Optional) On Amazon Linux 2, to ensure that the Docker daemon starts after each system reboot, run the following command:
 ```bash
 $ sudo systemctl enable docker
+$ sudo systemctl start docker
 ```
 * Add the ec2-user to the docker group so you can execute Docker commands without using sudo.
 ```bash
